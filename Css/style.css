@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 
+/* Font dan warna dasar */
 html {
     font-family: "kobo", sans-serif;
     color: #636363;
@@ -15,14 +16,16 @@ body {
     height: 100vh;
     overflow: auto; /* Memungkinkan scroll jika konten melampaui viewport */
     text-align: center;
-    background: linear-gradient(to bottom, #a0d9ff, #ffffff); /* Warna Kobo: biru langit */
+    background: linear-gradient(to bottom, #a0d9ff, #ffffff); /* Background gradasi biru langit */
 }
 
+/* Menyertakan font kobo */
 @font-face {
     font-family: "kobo";
     src: url('/etch-a-sketch-fun/Fonts/PixelifySans-VariableFont.ttf');
 }
 
+/* Styling header */
 .header-content {
     margin: 32px 0 24px 0;
 }
@@ -36,38 +39,42 @@ body {
 
 
 /*** Main-Content ***/
-
+/* Styling utama konten */
 .main-content {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
+/* Styling deskripsi */
 .main-content .description {
     font-size: 24px;
     padding: 16px;
 }
 
+/* Styling opsi dengan alignment dan centering */
 .main-content .options {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.grid-button .active{
+/* Styling tombol grid yang aktif */
+.grid-button .active {
     box-shadow: 0 0 30px #4b0082, 0 0 2px #F44D9B inset;
 }
 
+/* Styling untuk tombol warna */
 .options .color-button {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+/* Styling tombol warna dengan rectangle */
 .options .color-button .rectangle {
     background-color: transparent !important;
-    margin-block: 8px;
-    margin-inline: 40px;
+    margin: 8px 40px; /* Margin atas-bawah 8px, kiri-kanan 40px */
     width: 120px;
     height: 50px;
     border-radius: 4px;
@@ -75,20 +82,70 @@ body {
     padding: 8px;
     cursor: pointer;
     outline: 0 !important;
-    transition: all .3s ease-in;
+    transition: all 0.3s ease-in;
     font-size: 24px;
 }
 
+/* Styling tombol grid dengan bentuk lingkaran */
 .options .grid-button .circle {
     border-radius: 50%;   /* Membuat elemen berbentuk lingkaran */
     width: 100px;          /* Lebar lingkaran */
-    height: 100px;         /* Tinggi lingkaran harus sama dengan lebar untuk memastikan bentuk lingkaran */
-    margin-inline: 16px;
+    height: 100px;         /* Tinggi lingkaran */
+    margin: 0 16px;       /* Margin kiri-kanan 16px */
     background-color: transparent;
     font-size: 24px;
     cursor: pointer;
 }
 
+/* Styling grid container */
+.toy-container .grid-container {
+    display: inline-grid;
+    grid-gap: 0px; /* Jarak antar grid */
+    border: 5px solid #5A236C; /* Border grid */
+    border-radius: 2px;
+    box-shadow: 0 0 30px #392270; /* Shadow untuk grid container */
+} 
+
+/* Styling grid item */
 .toy-container .grid-container > div {
     background-color: aliceblue;
+}
+
+/* Grid 10x10 */
+.grid-10x10 {
+    grid-template-columns: repeat(10, auto); /* Membuat 10 kolom */
+}
+
+.grid-10x10 > div {
+    height: 70px;
+    width: 70px;
+    border: 0.5px solid #333333; /* Border grid item */
+}
+
+/* Grid 20x20 */
+.grid-20x20 {
+    grid-template-columns: repeat(20, auto); /* Membuat 20 kolom */
+}
+
+.grid-20x20 > div {
+    height: 35px;
+    width: 35px;
+    border: 0.5px solid #333333; /* Border grid item */
+}
+
+/* Grid 30x30 */
+.grid-30x30 {
+    grid-template-columns: repeat(30, auto); /* Membuat 30 kolom */
+}
+
+.grid-30x30 > div {
+    height: 23.3px;
+    width: 23.3px;
+    border: 0.5px solid #333333; /* Border grid item */
+}
+
+/* Styling footer */
+footer {
+    margin-top: 24px;
+    font-size: 24px;
 }

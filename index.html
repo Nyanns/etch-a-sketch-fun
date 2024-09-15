@@ -5,44 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
+    <!-- Link ke stylesheet normalize untuk reset CSS dan stylesheet utama -->
     <link rel="stylesheet" href="/etch-a-sketch-fun/Css/normalize.css">
     <link rel="stylesheet" href="/etch-a-sketch-fun/Css/style.css">
+    <!-- Link ke script JavaScript dengan atribut defer untuk menunda eksekusi hingga HTML dimuat -->
     <script src="script.js" defer></script>
 </head>
 
 <body>
+    <!-- Header section dengan judul aplikasi -->
     <header class="header-content">
         <h1 class="title">Etch-a-Sketch</h1>
     </header>
+
+    <!-- Main content section -->
     <main class="main-content">
+        <!-- Deskripsi aplikasi -->
         <p class="description">
             Choose the grid and the color, then hover the mouse to paint. <br>
             To clear the grid - just push the same or another grid button.
         </p>
+
+        <!-- Opsi untuk memilih warna dan grid -->
         <div class="options">
+            <!-- Tombol warna -->
             <div class="color-button">
                 <button class="kobo rectangle">Kobo</button>
                 <button class="rainbow rectangle">Rainbow</button>
             </div>
+
+            <!-- Tombol ukuran grid -->
             <div class="grid-button">
                 <button class="grid-10 circle">10X10</button>
                 <button class="grid-20 circle active">20X20</button>
                 <button class="grid-30 circle">30X30</button>
             </div>
+
+            <!-- Tombol warna tambahan -->
             <div class="color-button">
                 <button class="black rectangle">Black</button>
                 <button class="white rectangle">White</button>
             </div>
         </div>
+
+        <!-- Kontainer untuk grid -->
         <div class="toy-container">
             <div class="grid-container">
-
+                <!-- Grid akan dihasilkan dan ditambahkan di sini oleh JavaScript -->
             </div>
         </div>
     </main>
+
+    <!-- Footer dengan kredit pembuat -->
     <footer>
         <p>Created By <a href="https://github.com/Nyanns">Nyanns Dev</a></p>
     </footer>
 </body>
 
-</html>`
+</html>
