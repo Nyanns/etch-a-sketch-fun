@@ -1,0 +1,94 @@
+/*** Universal ***/
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "kobo", sans-serif;
+    color: #636363;
+}
+
+body {
+    height: 100vh;
+    overflow: auto; /* Memungkinkan scroll jika konten melampaui viewport */
+    text-align: center;
+    background: linear-gradient(to bottom, #a0d9ff, #ffffff); /* Warna Kobo: biru langit */
+}
+
+@font-face {
+    font-family: "kobo";
+    src: url('/etch-a-sketch-fun/Fonts/PixelifySans-VariableFont.ttf');
+}
+
+.header-content {
+    margin: 32px 0 24px 0;
+}
+
+.header-content .title {
+    font-size: 72px;
+    color: #333333;
+}
+
+/*** End Universal ***/
+
+
+/*** Main-Content ***/
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.main-content .description {
+    font-size: 24px;
+    padding: 16px;
+}
+
+.main-content .options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-button .active{
+    box-shadow: 0 0 30px #4b0082, 0 0 2px #F44D9B inset;
+}
+
+.options .color-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.options .color-button .rectangle {
+    background-color: transparent !important;
+    margin-block: 8px;
+    margin-inline: 40px;
+    width: 120px;
+    height: 50px;
+    border-radius: 4px;
+    border-color: #4b0082;
+    padding: 8px;
+    cursor: pointer;
+    outline: 0 !important;
+    transition: all .3s ease-in;
+    font-size: 24px;
+}
+
+.options .grid-button .circle {
+    border-radius: 50%;   /* Membuat elemen berbentuk lingkaran */
+    width: 100px;          /* Lebar lingkaran */
+    height: 100px;         /* Tinggi lingkaran harus sama dengan lebar untuk memastikan bentuk lingkaran */
+    margin-inline: 16px;
+    background-color: transparent;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.toy-container .grid-container > div {
+    background-color: aliceblue;
+}
